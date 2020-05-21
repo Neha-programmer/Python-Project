@@ -3,7 +3,7 @@ while True:
     print("---------Birthday App---------")
     print("1.Show Birthday")
     print("2.Add to Birthday List")
-    print("3.Enter list of Birthday")
+    print("3.Print list of Birthday")
     print("4.Exit")
     choice=int(input("Enter the choice"))
     if choice==1:
@@ -19,8 +19,11 @@ while True:
         dict[name]=date
         print("Birthday Added")
     elif choice==3:
-        for i in dict:
-            print(i,":",dict[i])
+        if (len(dict.keys()))!=0:
+            for i in dict:
+                print(i,":",dict[i])
+        else:
+            print("Add Birthday to list")
     elif choice==4:
         break
     else:
